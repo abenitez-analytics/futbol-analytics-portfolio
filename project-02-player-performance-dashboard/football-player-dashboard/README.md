@@ -1,98 +1,170 @@
-⚽ Project 02 – Player Performance Dashboard
-Overview
+# ⚽ La Liga Player Performance & Scouting Dashboard
 
-This project simulates the workflow of a professional football data analyst working for a club recruitment and performance department.
+## Project Overview
 
-Using StatsBomb event data from La Liga, player-level performance metrics were calculated, normalized per 90 minutes, and transformed into scouting insights.
+This project analyzes player performance using StatsBomb event-level data from 100 La Liga matches.
 
-The project combines:
+The objective was to simulate the workflow of a Football Data Analyst working for a professional club, transforming raw event data into actionable scouting insights through Python, SQL, and Power BI.
 
-Python
-Pandas
-StatsBomb API
-SQL
-Data Visualization
-Power BI
-Objectives
-Collect football event data from StatsBomb
-Build player performance metrics
-Normalize statistics per 90 minutes
-Identify top attacking players
-Create a scouting shortlist
-Produce visualizations and dashboards
-Dataset
+---
 
-Source:
+## Business Problem
 
-StatsBomb Open Data
+Football clubs need objective ways to identify players who:
 
-Competition:
+* Generate attacking value
+* Contribute defensively
+* Fit specific tactical profiles
+* Represent potential recruitment opportunities
 
-La Liga
+This project demonstrates how event data can be transformed into performance indicators and scouting reports.
 
-Season:
+---
 
-2015/2016
-Project Structure
+## Dataset
 
-project-02-player-performance-dashboard/
+Source: StatsBomb Open Data
 
-├── data/
-│ ├── raw/
-│ └── cleaned/
+Scope:
 
-├── notebooks/
-│ ├── 01_data_exploration.ipynb
-│ ├── 02_data_collection.ipynb
-│ ├── 03_player_analysis.ipynb
-│ └── 04_scouting_analysis.ipynb
+* Competition: La Liga
+* Matches analyzed: 100
+* Events analyzed: 340,199
+* Players analyzed: 367
 
-├── scripts/
-│ └── build_player_dataset.py
+---
 
-├── sql/
-│ ├── create_tables.sql
-│ └── analysis_queries.sql
+## Tech Stack
 
-├── visuals/
+### Python
 
-├── powerbi/
+* Pandas
+* NumPy
+* StatsBombPy
+* Matplotlib
+* mplsoccer
 
-├── README.md
+### SQL
 
-└── requirements.txt
+* Data exploration
+* Player ranking queries
+* Scouting shortlist creation
 
-Key Metrics
-Expected Goals (xG)
-xG per 90
-Shots per 90
-Passes
-Pressures
-Ball Recoveries
-Visualizations
+### Power BI
 
-Included:
+* KPI dashboard
+* Player rankings
+* Scouting visualizations
 
-Shot Map
-Pass Map
-Scouting Scatter Plot
-Player Performance Overview
-Skills Demonstrated
-Python
-Data Cleaning
-Feature Engineering
-Aggregations
-Visualization
-SQL
-Table Creation
-Aggregation Queries
-Scouting Queries
-Football Analytics
-Event Data Analysis
-Player Evaluation
-Scouting Methodology
-Future Improvements
-Interactive Power BI Dashboard
-Player Radar Charts
-Position-Based Comparisons
-Recruitment Models
+---
+
+## Project Workflow
+
+### 1. Data Collection
+
+Downloaded event-level football data using StatsBombPy.
+
+### 2. Data Cleaning
+
+Processed and structured raw event data into analytical datasets.
+
+### 3. Feature Engineering
+
+Created player-level metrics including:
+
+* Passes
+* Shots
+* Expected Goals (xG)
+* Pressures
+* Recoveries
+* xG per 90
+* Shots per 90
+* Pressures per 90
+* Attacking Score
+
+### 4. Scouting Analysis
+
+Built player rankings and scouting shortlists using custom performance metrics.
+
+### 5. Dashboard Development
+
+Created an interactive Power BI dashboard for player evaluation.
+
+---
+
+## Key Metrics
+
+| Metric            | Description                              |
+| ----------------- | ---------------------------------------- |
+| xG                | Expected Goals                           |
+| xG per 90         | Expected Goals normalized per 90 minutes |
+| Shots per 90      | Shot volume                              |
+| Pressures per 90  | Defensive intensity                      |
+| Recoveries per 90 | Ball-winning contribution                |
+| Attacking Score   | Composite attacking performance metric   |
+
+---
+
+## Visualizations
+
+### Shot Map
+
+Player shot locations and xG values.
+
+### Pass Map
+
+Passing behavior and distribution.
+
+### Scouting Map
+
+Relationship between attacking production and defensive intensity.
+
+---
+
+## SQL Analysis
+
+Included SQL queries:
+
+* Top Attackers
+* Top Pressers
+* Scouting Shortlist
+
+---
+
+## Dashboard
+
+The Power BI dashboard includes:
+
+* Player Overview
+* Attacking Analysis
+* Defensive Analysis
+* Scouting Shortlist
+
+---
+
+## Key Findings
+
+* Event data provides a detailed view of player performance beyond goals and assists.
+* xG and pressure metrics help identify players who contribute both offensively and defensively.
+* Scouting profiles can be created using simple but effective analytical frameworks.
+
+---
+
+## Future Improvements
+
+* Full-season analysis
+* Pass networks
+* Team style analysis
+* Radar charts
+* Predictive models
+* Automated ETL pipeline
+
+---
+
+## Author
+
+Andres Benitez
+
+Football Analytics Portfolio Project
+Python | SQL | Power BI | StatsBomb
+
